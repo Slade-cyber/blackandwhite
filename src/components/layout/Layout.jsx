@@ -1,24 +1,27 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
-import Header from "../../utils/header";
-import Categories from "../../utils/categories";
-import SidebarApp from "../../utils/sidebar";
+import { Outlet } from "react-router-dom";
+import Header from "../../utils/header"; // Header import edilmiş
+import SidebarApp from "../../utils/sidebar"; // SidebarApp import edilmiş
+import Categories from "../../utils/categories"; // Eksik olan Categories bileşeni eklendi
 
 const Layout = () => {
   return (
     <div>
+      {/* Header ve Kategoriler */}
       <div>
         <Header />
         <hr className="my-4" />
         <Categories />
         <hr className="my-4" />
       </div>
+
+      {/* Sidebar ve Ana İçerik */}
       <div className="flex">
         <div>
           <SidebarApp />
         </div>
-        <main>
-          {/* Alt rotaların içeriklerini buraya yerleştir */}
+        <main className="flex-grow p-4">
+          {/* Alt rotaların render edildiği alan */}
           <Outlet />
         </main>
       </div>

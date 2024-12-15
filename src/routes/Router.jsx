@@ -1,22 +1,24 @@
-// src/routes/Router.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "../components/layout/Layout";
-import ProductList from "../pages/home/product/productlist";
-import ProductDetail from "../pages/home/product/productdetail";
+import HomePage from "../pages/home/homepage/HomePage"; // Ana sayfa
+import Layout from "../components/layout/Layout"; // Layout bileşeni
+import ProductList from "../pages/home/product/productlist"; // Ürün listesi
+import ProductDetail from "../pages/home/product/productdetail"; // Ürün detayı
 
 const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          {/* Ana sayfa */}
-          <Route index element={<ProductList />} />
-          
-          {/* Ürün detay sayfası */}
-          <Route path="products/:id" element={<ProductDetail />} />
+        {/* HomePage: Layout dışında, bağımsız olarak render edilecek */}
+        <Route path="/" element={<HomePage />} />
 
-          {/* Discover sayfası */}
+        {/* Layout ile sarılı diğer rotalar */}
+        <Route path="/*" element={<Layout />}>
+          {/* Ürün Listeleme Sayfası */}
+          <Route path=" " element={<ProductList />} />
+
+          {/* Ürün Detay Sayfası */}
+          <Route path="products/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
     </Router>
