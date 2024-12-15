@@ -1,6 +1,8 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import Header from "../../utils/header";
+import Categories from "../../utils/categories";
+import SidebarApp from "../../utils/sidebar";
 
 const Layout = () => {
   return (
