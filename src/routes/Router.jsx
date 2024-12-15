@@ -14,11 +14,11 @@ const AppRouter = () => {
 
         {/* Layout ile sarılı diğer rotalar */}
         <Route path="/*" element={<Layout />}>
-          {/* Ürün Listeleme Sayfası */}
-          <Route path=" " element={<ProductList />} />
+          {/* Kategori bazlı ürün listesi */}
+          <Route path="products/:category" element={<ProductList />} />
 
-          {/* Ürün Detay Sayfası */}
-          <Route path="products/:id" element={<ProductDetail />} />
+          {/* Ürün detay sayfası */}
+          <Route path="products/:category/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
     </Router>

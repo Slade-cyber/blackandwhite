@@ -1,22 +1,26 @@
-// src/pages/ProductList.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const dummyProducts = [
-  { id: 1, name: "Ürün 1", price: "100₺" },
-  { id: 2, name: "Ürün 2", price: "200₺" },
-  { id: 3, name: "Ürün 3", price: "300₺" },
-];
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import products from "../../../../dummydata/products";
 
 const ProductList = () => {
+  const { category } = useParams(); // Kategoriyi URL'den alıyoruz
+  const categoryProducts = products[category]; // Kategoriye özgü ürünleri alıyoruz
+
+  if (!categoryProducts) {
+    return <div>Bu kategoriye ait ürün bulunamadı!</div>;
+  }
+
   return (
     <div>
-      <h1 className="text-2xl mb-4">Ürünler</h1>
-      <ul className="space-y-4">
-        {dummyProducts.map((product) => (
-          <li key={product.id} className="border p-4 rounded-md shadow-md">
-            <Link to={`/products/${product.id}`} className="text-blue-500 hover:underline">
-              {product.name} - {product.price}
+      <h2 className="text-2xl mb-4">{category.toUpperCase()} Ürünleri</h2>
+      <ul>
+        {categoryProducts.map((product) => (
+          <li key={product.id}>
+            <Link
+              to={`/products/${category}/${product.id}`}
+              className="text-blue-500 hover:underline"
+            >
+              {product.name} - {product.price}₺
             </Link>
           </li>
         ))}
