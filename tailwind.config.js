@@ -46,11 +46,11 @@ module.exports = {
         light: {
           layout: {}, // layout tokens for light theme
           colors: {
-            background: "#FFFFFF",
+            background: "#F0F0F0",
             foreground: "#11181C",
             primary: {
               foreground: "#FFFFFF",
-              DEFAULT: "#006FEE",
+              DEFAULT: "#F0F0F0",
             },
           },
         },
