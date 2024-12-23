@@ -21,7 +21,7 @@ const Header = () => {
     <div className="flex justify-between items-center pt-8 pb-8 mx-24">
       <div>
         <a
-          href="/mainpage"
+          href="/"
           className="text-2xl bg-gradient-to-r from-slate-400 via-slate-700 to-gray-950 inline-block 
         text-transparent bg-clip-text font-bold"
         >

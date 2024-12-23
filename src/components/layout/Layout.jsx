@@ -6,7 +6,7 @@ import Categories from "../../utils/categories"; // Eksik olan Categories bileş
 
 const Layout = () => {
   return (
-    <div>
+    <div className="h-screen w-screen overflow-x-hidden"> {/* Yalnızca yatay kaydırma çubuğunu gizler */}
       {/* Header ve Kategoriler */}
       <div>
         <Header />
@@ -20,7 +20,7 @@ const Layout = () => {
         <div>
           <SidebarApp />
         </div>
-        <main className="flex-grow p-4">
+        <main className="flex-grow p-4 overflow-auto">
           {/* Alt rotaların render edildiği alan */}
           <Outlet />
         </main>

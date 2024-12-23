@@ -2,7 +2,7 @@ const itemsMen = [
     {
         id: 2001,
         ureticiAdi: 'XYZ Firma',
-        gelinlikAdi: 'Klasik Smokin',
+        urunAdi: 'Klasik Smokin',
         fiyat: '7.000 - 9.000',
         imageUrl: 'image-url',
         firma: 'XYZ Firma',

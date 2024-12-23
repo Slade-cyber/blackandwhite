@@ -20,7 +20,7 @@ const HomePage = () => {
       className="w-[50px] h-[50px] mr-2" 
     />
     <a
-      href="/mainpage"
+      href="/"
       className="text-2xl font-semibold font-serif"
     >
       Black&White

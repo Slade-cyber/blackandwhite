@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "../pages/home/homepage/HomePage"; // Ana sayfa
 import Layout from "../components/layout/Layout"; // Layout bileşeni
-import ProductList from "../pages/home/product/productlist"; // Ürün listesi
-import ProductDetail from "../pages/home/product/productdetail"; // Ürün detayı
+import ProductList from "../components/product/productlist"; // Ürün listesi
+import ProductDetail from "../components/product/productdetail"; // Ürün detayı
 
 const AppRouter = () => {
   return (
